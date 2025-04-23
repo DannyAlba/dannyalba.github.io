@@ -6,6 +6,10 @@
     <title>CU Solar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+      * {
+      margin: 0;
+      padding: 0;
+    }
         .navbar {
             background: transparent !important;
         }
@@ -26,10 +30,32 @@
             object-fit: cover;
         }
         .et_pb_section_0 {
-          background-image: url("car.jpg");
+          background-image: url("teampic.jpg");
           background-size: cover; 
           background-position: center; 
         }
+      .hero {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: url('teampic.jpg') center/cover no-repeat;
+      transition: height 0.3s ease, opacity 0.3s ease;
+      z-index: -1;
+    }
+
+
+
+    .hero.shrink {
+      height: 20vh;
+      opacity: 0.5;
+    }
+    body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 
     </style>
@@ -58,8 +84,24 @@
             </div>
         </div>
     </nav>
+
+    <div class="hero" id="hero"></div>
+
+    <script>
+      const hero = document.getElementById('hero');
+  
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          hero.classList.add('shrink');
+        } else {
+          hero.classList.remove('shrink');
+        }
+      });
+    </script>
+
+    
     <!-- <img src="car.jpg" alt="Full Screen Image" class="fullscreen-img"> -->
-    <div data-fix-page-container="on" style="padding-top: 814px;" class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular et_pb_section_first">
+    <!-- <div data-fix-page-container="on" style="padding-top: 814px;" class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular et_pb_section_first">
       <span class="et_pb_background_mask"></span>      
       <div class="et_pb_row et_pb_row_0 et_pb_gutters2">
       <div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">    
@@ -68,67 +110,28 @@
     </div>
     </div>
     </div>
-    </div>
+    </div> -->
+   <div class="content">
+    <div>
 
+      <p style="margin-bottom: 1000px;">This is just filler space.</p>
+    
+      <footer>Footer content here</footer>
+    </div>
     <p style="color: white;"> We are the solar car club at CU Boulder! <br><br><br><br><br><br><br><br></p>
+  </div>
 
 
-    <div id="carouselExampleControls" class="carousel slide mx-auto" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100vw" src="./car.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-150" src="./cu.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-150" src="./panels.jpg" alt="Third slide">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color: #343a40; color: black;">
-    <!-- Section: Social media -->
-    <!-- <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="background-color: gold;"> -->
-      <!-- Left -->
-  
-      <!-- Right -->
-      <!-- <div>
-        <a href="" class="me-4 text-reset" style="background-color: gold;">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div> -->
-      <!-- Right -->
+
     </section>
     <!-- Section: Social media -->
   
     <!-- Section: Links  -->
-    <section class="" style="background-color: #B59410 ; margin-top: 50px;">
+    <section class="" style="background-color: #B59410 ;">
       <div class="container text-center text-md-start mt-5" style="background-color: #B59410; margin-top: 50px;">
         <!-- Grid row -->
         <div class="row mt-3">
